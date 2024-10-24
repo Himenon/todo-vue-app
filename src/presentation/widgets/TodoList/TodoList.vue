@@ -5,7 +5,7 @@ import AddTodoForm from './AddTodoForm.vue';
 import TodoItem from './TodoItem.vue';
 
 // Propsの型定義
-type TodoListProps = {
+export type TodoListProps = {
   items: { title: string; removeButton: { onClick: () => void } }[];
   addTodoForm: { onSubmit: (data: { title: string }) => void };
 };

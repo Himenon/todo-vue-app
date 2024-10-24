@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Propsの型定義
-type LoadingProps = {
+export type LoadingProps = {
   type: 'TEXT';
 };
 

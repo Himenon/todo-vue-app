@@ -8,11 +8,11 @@ export type TodoListContainerProps = GenerateTodoListPropsArgs;
 
 const props = defineProps<TodoListContainerProps>();
 
-const count  = TodoListStore.useCount();
+const count  = computed(() => TodoListStore.useCount());
 const todoListProps = computed(() => useGenerateProps(props));
 </script>
 
 <template>
   <Widgets.TodoList v-bind="todoListProps" />
-  <div>{{ count }}</div>
+  <div>Parent Count: {{ count }}</div>
 </template>

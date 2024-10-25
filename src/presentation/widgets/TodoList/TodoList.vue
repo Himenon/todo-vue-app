@@ -12,6 +12,7 @@ export type TodoListProps = {
 }
 
 defineProps<TodoListProps>();
+
 </script>
 
 <template>

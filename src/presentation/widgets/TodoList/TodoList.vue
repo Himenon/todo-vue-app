@@ -1,10 +1,9 @@
 
 <script setup lang="ts">
-import { defineProps, type Ref, unref } from 'vue';
+import { defineProps, type Ref } from 'vue';
 import AddTodoForm, { type AddTodoFormProps } from './AddTodoForm.vue';
 import TodoItem, { type TodoItemProps } from './TodoItem.vue';
 
-// Propsの型定義
 export type TodoListProps = {
   count: number;
   items: TodoItemProps[];

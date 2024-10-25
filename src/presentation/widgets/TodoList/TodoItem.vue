@@ -6,12 +6,12 @@ export type TodoItemProps = {
   removeButton: Pick<ButtonHTMLAttributes, "onClick">;
 };
 
-const props = defineProps<TodoItemProps>();
+defineProps<TodoItemProps>();
 </script>
 
 <template>
   <p>
     <strong>{{ title }}</strong>
-    <button @click="removeButton.onClick">Remove</button>
+    <button v-bind="removeButton">Remove</button>
   </p>
 </template>

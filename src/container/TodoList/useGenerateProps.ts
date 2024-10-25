@@ -19,7 +19,6 @@ export const useGenerateProps = (
     title: todoItem.title,
     removeButton: {
       onClick: () => {
-        console.log(`Remove Target: ${todoItem.id}`);
         TodoListStore.removeTodo(todoItem.id);
       },
     },
@@ -28,8 +27,8 @@ export const useGenerateProps = (
   const count = TodoListStore.useCount();
 
   return {
-    count: count,
+    count,
     addTodoForm,
-    items: items,
+    items,
   };
 };

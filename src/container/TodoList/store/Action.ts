@@ -11,6 +11,10 @@ export const initialize = () => {
   ]);
 };
 
+export const countUp = () => {
+  state.counter += 1;
+};
+
 export const clear = () => {
   state.todoItems = null;
 };

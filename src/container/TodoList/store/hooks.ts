@@ -6,10 +6,12 @@ export const useInitialized = () => {
 };
 
 export const useTodoItems = () => {
-  return computed(() => {
-    if (state.todoItems === null) {
-      throw new Error("初期化してください");
-    }
-    return [...state.todoItems.values()];
-  });
+  if (state.todoItems === null) {
+    throw new Error("初期化してください");
+  }
+  return [...state.todoItems.values()];
+};
+
+export const useCount = () => {
+  return state.counter;
 };

@@ -1,6 +1,6 @@
 import { TodoListStore } from "./store";
 import type { Widgets } from "../../presentation";
-
+import { computed } from "vue";
 export type GenerateTodoListPropsArgs = {};
 
 export const useGenerateProps = (
@@ -16,20 +16,21 @@ export const useGenerateProps = (
     },
   };
 
-  const items = todoItems.value.map(
-    (todoItem): Widgets.TodoListProps["items"][0] => ({
-      title: todoItem.title,
-      removeButton: {
-        onClick: () => {
-          console.log(`Remove Target: ${todoItem.id}`);
-          TodoListStore.removeTodo(todoItem.id);
-        },
+  const items = todoItems.map((todoItem) => ({
+    title: todoItem.title,
+    removeButton: {
+      onClick: () => {
+        console.log(`Remove Target: ${todoItem.id}`);
+        TodoListStore.removeTodo(todoItem.id);
       },
-    })
-  );
+    },
+  }));
+
+  const count = TodoListStore.useCount();
 
   return {
+    count: count,
     addTodoForm,
-    items,
+    items: items,
   };
 };

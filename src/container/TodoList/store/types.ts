@@ -5,4 +5,5 @@ export type TodoItem = {
 
 export type State = {
   todoItems: Map<TodoItem["id"], TodoItem> | null;
+  counter: number;
 };

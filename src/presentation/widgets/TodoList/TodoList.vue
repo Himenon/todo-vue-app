@@ -19,7 +19,7 @@ defineProps<TodoListProps>();
   <div>
     <h2>Todo List</h2>
     <div>Count : {{ count }}</div>
-    <!-- <AddTodoForm v-bind="addTodoForm" /> -->
+    <AddTodoForm v-bind="addTodoForm" />
     <div>
       <TodoItem
         v-for="(item, index) in items"

@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import { reactive, defineProps } from 'vue';
-import { z } from 'zod';
+import { reactive, defineProps, type FormHTMLAttributes } from 'vue';
 import { useForm } from 'vee-validate';
+import * as Validator from "../../../validator";
 
-// Zodバリデーションスキーマ
-const AddTodoFormSchema = z.object({
-  title: z.string().min(1, 'Title is required'),
-});
 
-// Propsの定義
 export type AddTodoFormProps = {
   onSubmit: (data: { title: string }) => void;
 };
 
-// Propsの受け取り
 const props = defineProps<AddTodoFormProps>();
 
-// フォームの初期化
-const formData = reactive({ title: '' });
-const { handleSubmit, resetForm } = useForm({
-  validationSchema: AddTodoFormSchema,
-  initialValues: formData,
+const methods = useForm<Validator.AddTodoForm>({
+  validationSchema: Validator.AddTodoForm,
+  initialValues: reactive<Validator.AddTodoForm>({
+    title: "",
+  })
 });
 
-// フォーム送信処理
-const submitHandler = (values: { title: string }) => {
-  props.onSubmit(values);
-  resetForm(); // フォームのリセット
+
+
+const formProps: FormHTMLAttributes = {
+  onSubmit: () => {
+    methods.handleSubmit((fields) => {
+      props.onSubmit(fields);
+      methods.resetForm();
+    })
+
+  }
 };
 </script>
 
 <template>
-  <form @submit="handleSubmit">
-    <input v-model="formData.title" />
+  <form v-bind="formProps">
+    <input name="title" v-model="methods.values.title" />
     <button type="submit">Add Todo</button>
   </form>
 </template>

@@ -16,7 +16,7 @@ const props = defineProps<TodoListProps>();
 <template>
   <div>
     <h2>Todo List</h2>
-    <AddTodoForm v-bind="addTodoForm" />
+    <!-- <AddTodoForm v-bind="addTodoForm" /> -->
     <div>
       <TodoItem
         v-for="(item, index) in items"

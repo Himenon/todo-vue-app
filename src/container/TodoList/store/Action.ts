@@ -1,10 +1,5 @@
-import { reactive } from "vue";
 import type * as Types from "./types";
-
-// リアクティブな状態
-export const state = reactive({
-  todoItems: null as Map<string, Types.TodoItem> | null,
-});
+import { state } from "./State";
 
 // 状態の初期化
 export const initialize = () => {

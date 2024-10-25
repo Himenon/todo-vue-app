@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { type ButtonHTMLAttributes, defineProps } from 'vue';
 
 export type TodoItemProps = {
   title: string;
-  removeButton: Pick<HTMLButtonElement, 'onclick'>;
+  removeButton: Pick<ButtonHTMLAttributes, "onClick">;
 };
 
-defineProps<TodoItemProps>();
+const props = defineProps<TodoItemProps>();
 </script>
 
 <template>
   <p>
     <strong>{{ title }}</strong>
-    <button @click=[removeButton.onclick]>Remove</button>
+    <button @click="removeButton.onClick">Remove</button>
   </p>
 </template>

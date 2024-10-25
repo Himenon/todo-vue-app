@@ -7,14 +7,13 @@ import WidgetsLoading from '../../presentation/widgets/Loading/Loading.vue';
 const initialized = TodoListStore.useInitialized()
 
 onMounted(() => {
-  const timeoutId = window.setTimeout(() => {
+  window.setTimeout(() => {
     TodoListStore.initialize();
-  }, 1000);
+  }, 0);
+});
 
-  onBeforeUnmount(() => {
-    window.clearTimeout(timeoutId);
-    TodoListStore.clear();
-  });
+onBeforeUnmount(() => {
+  TodoListStore.clear();
 });
 </script>
 

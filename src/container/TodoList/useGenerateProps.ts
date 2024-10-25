@@ -2,8 +2,16 @@ import { computed } from "vue";
 import { TodoListStore } from "./store";
 import type { Widgets } from "../../presentation";
 
-export const useGenerateProps = (): Widgets.TodoListProps => {
+export type GenerateTodoListPropsArgs = {};
+
+export const useGenerateProps = (
+  _props: GenerateTodoListPropsArgs
+): Widgets.TodoListProps => {
   const todoItems = TodoListStore.useTodoItems();
+
+  console.log({
+    todoItems,
+  });
 
   const addTodoForm = {
     onSubmit: (fields: { title: string }) => {
@@ -19,7 +27,7 @@ export const useGenerateProps = (): Widgets.TodoListProps => {
       (todoItem): Widgets.TodoListProps["items"][0] => ({
         title: todoItem.title,
         removeButton: {
-          onclick: () => {
+          onClick: () => {
             TodoListStore.removeTodo(todoItem.id);
           },
         },

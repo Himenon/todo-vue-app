@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { reactive, defineProps } from 'vue';
 import { z } from 'zod';
 import { useForm } from 'vee-validate';
 

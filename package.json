@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vee-validate/zod": "^4.14.4",
     "vee-validate": "^4.14.4",
     "vue": "^3.5.10",
     "zod": "^3.23.8"

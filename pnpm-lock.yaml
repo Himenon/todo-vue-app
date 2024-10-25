@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@vee-validate/zod':
+        specifier: ^4.14.4
+        version: 4.14.4(vue@3.5.12(typescript@5.6.3))
       vee-validate:
         specifier: ^4.14.4
         version: 4.14.4(vue@3.5.12(typescript@5.6.3))
@@ -273,6 +276,9 @@ packages:
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
+
+  '@vee-validate/zod@4.14.4':
+    resolution: {integrity: sha512-ovRr2jZ+exuPnqT2LwNpsmxW4ETOywrvZv4aoihTSsBHZIi082IbqPjM+wBd4oaCK7vyByMPyGSZOG19GTmjYw==}
 
   '@vitejs/plugin-vue@5.1.4':
     resolution: {integrity: sha512-N2XSI2n3sQqp5w7Y/AN/L2XDjBIRGqXko+eDp42sydYSBeJuSm5a1sLf8zakmo8u7tA8NmBgoDLA1HeOESjp9A==}
@@ -650,6 +656,14 @@ snapshots:
     optional: true
 
   '@types/estree@1.0.6': {}
+
+  '@vee-validate/zod@4.14.4(vue@3.5.12(typescript@5.6.3))':
+    dependencies:
+      type-fest: 4.26.1
+      vee-validate: 4.14.4(vue@3.5.12(typescript@5.6.3))
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - vue
 
   '@vitejs/plugin-vue@5.1.4(vite@5.4.9)(vue@3.5.12(typescript@5.6.3))':
     dependencies:

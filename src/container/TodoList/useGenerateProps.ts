@@ -1,6 +1,5 @@
 import { TodoListStore } from "./store";
 import type { Widgets } from "../../presentation";
-import { computed } from "vue";
 export type GenerateTodoListPropsArgs = {};
 
 export const useGenerateProps = (

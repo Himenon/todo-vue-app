@@ -1,8 +1,7 @@
-import { computed } from "vue";
 import { state } from "./State";
 
 export const useInitialized = () => {
-  return computed(() => state.todoItems !== null);
+  return state.todoItems !== null;
 };
 
 export const useTodoItems = () => {

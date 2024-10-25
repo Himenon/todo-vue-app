@@ -6,7 +6,8 @@ export const useInitialized = () => {
 };
 
 export const useTodoItems = () => {
-  return computed(() => {
+  return computed((previous) => {
+    console.log(previous);
     if (state.todoItems === null) {
       throw new Error("初期化してください");
     }

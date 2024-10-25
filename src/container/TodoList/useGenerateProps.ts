@@ -1,4 +1,3 @@
-import { computed } from "vue";
 import { TodoListStore } from "./store";
 import type { Widgets } from "../../presentation";
 

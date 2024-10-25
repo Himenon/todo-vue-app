@@ -1,7 +1,6 @@
 import type * as Types from "./types";
 import { state } from "./State";
 
-// 状態の初期化
 export const initialize = () => {
   state.todoItems = new Map([
     ["#1", { id: "#1", title: "Vue" }],
@@ -12,12 +11,10 @@ export const initialize = () => {
   ]);
 };
 
-// 状態のクリア
 export const clear = () => {
   state.todoItems = null;
 };
 
-// Todoの追加
 export const addTodo = (newTodoItem: Types.TodoItem) => {
   if (!state.todoItems) {
     return;
@@ -28,7 +25,6 @@ export const addTodo = (newTodoItem: Types.TodoItem) => {
   state.todoItems.set(newTodoItem.id, newTodoItem);
 };
 
-// Todoの削除
 export const removeTodo = (todoItemId: Types.TodoItem["id"]) => {
   if (!state.todoItems) {
     return;

@@ -1,13 +1,13 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import AddTodoForm from './AddTodoForm.vue';
-import TodoItem from './TodoItem.vue';
+import AddTodoForm, { type AddTodoFormProps } from './AddTodoForm.vue';
+import TodoItem, { type TodoItemProps } from './TodoItem.vue';
 
 // Propsの型定義
 export type TodoListProps = {
-  items: { title: string; removeButton: { onClick: () => void } }[];
-  addTodoForm: { onSubmit: (data: { title: string }) => void };
+  items: TodoItemProps[];
+  addTodoForm: AddTodoFormProps;
 };
 
 const props = defineProps<TodoListProps>();

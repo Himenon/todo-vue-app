@@ -9,7 +9,7 @@ const AddTodoFormSchema = z.object({
 });
 
 // Propsの定義
-type AddTodoFormProps = {
+export type AddTodoFormProps = {
   onSubmit: (data: { title: string }) => void;
 };
 

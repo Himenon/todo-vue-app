@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 
-// Propsの型定義
-type TodoItemProps = {
+export type TodoItemProps = {
   title: string;
   removeButton: Pick<HTMLButtonElement, 'onclick'>;
 };

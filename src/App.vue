@@ -1,14 +1,10 @@
 <script setup>
-import { ref } from 'vue'
-const count = ref(0)
+import TodoListFetchContainer from "./container/TodoList/FetchContainer.vue"
 </script>
 
 <template>
-  <button @click="count++">Count is: {{ count }}</button>
+  <TodoListFetchContainer/>
 </template>
 
 <style scoped>
-button {
-  font-weight: bold;
-}
 </style>

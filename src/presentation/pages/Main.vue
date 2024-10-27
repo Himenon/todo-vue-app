@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 
-export type MainPageProps = {};
+export type MainProps = {};
 
-defineProps<MainPageProps>();
+defineProps<MainProps>();
 </script>
 
 <template>
@@ -11,7 +11,7 @@ defineProps<MainPageProps>();
 
     <header class="header">
       <h1>Todos</h1>
-      <slot name="HeadingContent"></slot>
+      <slot name="header-content"></slot>
     </header>
 
     <section class="main">

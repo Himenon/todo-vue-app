@@ -2,7 +2,7 @@
 import { onMounted, onBeforeUnmount, computed } from 'vue';
 import { TodoListStore } from './store';
 import TodoListContainer from './Container.vue';
-import WidgetsLoading from '../../presentation/widgets/Loading/Loading.vue';
+import WidgetsLoading from '../../../presentation/widgets/Loading/Loading.vue';
 
 const initialized = computed(() => TodoListStore.useInitialized());
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useGenerateProps, type GenerateTodoListPropsArgs } from './useGenerateProps.js';
-import * as Widgets from '../../presentation/widgets';
+import * as Widgets from '../../../presentation/widgets';
 import { TodoListStore } from "./store";
 import { computed } from "vue";
 

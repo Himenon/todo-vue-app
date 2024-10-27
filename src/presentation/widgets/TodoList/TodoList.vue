@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
 import { defineProps, type Ref } from 'vue';
-import AddTodoForm, { type AddTodoFormProps } from './AddTodoForm.vue';
+import AddTodoForm, { type AddTodoFormProps } from '../AddTodoForm/AddTodoForm.vue';
 import TodoItem, { type TodoItemProps } from './TodoItem.vue';
 
 export type TodoListProps = {

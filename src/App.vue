@@ -5,6 +5,3 @@ import TodoListFetchContainer from "./container/TodoList/FetchContainer.vue"
 <template>
   <TodoListFetchContainer/>
 </template>
-
-<style scoped>
-</style>

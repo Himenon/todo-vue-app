@@ -1,11 +1,10 @@
 
 <script setup lang="ts">
-import { defineProps, type Ref } from 'vue';
+import { defineProps } from 'vue';
 import AddTodoForm, { type AddTodoFormProps } from './AddTodoForm.vue';
 import TodoItem, { type TodoItemProps } from './TodoItem.vue';
 
 export type TodoListProps = {
-  count: number;
   items: TodoItemProps[];
   addTodoForm: AddTodoFormProps;
 }
@@ -17,7 +16,6 @@ defineProps<TodoListProps>();
 <template>
   <div>
     <h2>Todo List</h2>
-    <div>Count : {{ count }}</div>
     <AddTodoForm v-bind="addTodoForm" />
     <div>
       <TodoItem

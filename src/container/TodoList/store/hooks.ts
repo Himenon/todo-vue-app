@@ -10,7 +10,3 @@ export const useTodoItems = () => {
   }
   return [...state.todoItems.values()];
 };
-
-export const useCount = () => {
-  return state.counter;
-};

@@ -10,10 +10,6 @@ onMounted(() => {
   window.setTimeout(() => {
     TodoListStore.initialize();
   }, 0);
-
-  window.setInterval(() => {
-    TodoListStore.countUp()
-  }, 1000)
 });
 
 onBeforeUnmount(() => {

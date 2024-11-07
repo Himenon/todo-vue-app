@@ -24,10 +24,7 @@ export const useGenerateProps = (
     },
   }));
 
-  const count = TodoListStore.useCount();
-
   return {
-    count,
     addTodoForm,
     items,
   };

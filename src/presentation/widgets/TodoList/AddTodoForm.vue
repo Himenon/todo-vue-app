@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { reactive, defineProps, type FormHTMLAttributes } from "vue";
-import { useForm, Field } from "vee-validate";
+import { useForm } from "vee-validate";
 import * as Validator from "../../../validator";
 import { toTypedSchema } from "@vee-validate/zod";
 
 export type AddTodoFormProps = {
-  onSubmit: (data: { title: string }) => void;
+  onSubmit: (data: Validator.AddTodoForm) => void;
 };
 
 const props = defineProps<AddTodoFormProps>();
